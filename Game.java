@@ -10,8 +10,8 @@ import java.util.*;
 class Player {
 	int myNumber = 0;	//Guessed number
 	int theNumber;		//Real number
-	int tries			//Number of attempts
-	bool winner = false;
+	int tries;			//Number of attempts
+	Boolean winner = false;
 	Random rand = new Random();
 	public void runGame(){
 		theNumber = rand.nextInt(10) +1;
@@ -22,8 +22,8 @@ class Player {
 		}
 	}
 	void setup(){
-		System.println("Guess a number between 1 and 10\n");
-		System.println("Hint: The number is:" + theNumber);
+		System.out.println("Guess a number between 1 and 10\n");
+		System.out.println("Hint: The number is:" + theNumber);
 		}
 	void guess(){
 		myNumber = System.in.nextInt();
@@ -31,16 +31,16 @@ class Player {
 		}
 	void score(){
 		if (myNumber == theNumber){
-			System.println("Congrats you got it! It took you:");
+			System.out.println("Congrats you got it! It took you:");
 			if (tries==1){ System.println("1 try");}
-			else{System.println(tries + " tries");}
+			else{System.out.println(tries + " tries");}
 		}
-		else {winner=true;}
+		else {
+			
+			winner=true;}
 		}
 
 	}
-
-}
 
 class Game {
 	public static void main(String[] args)
